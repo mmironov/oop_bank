@@ -29,7 +29,7 @@ public class AccountTest {
         final double amountToDeposit = 1000;
         account.deposit(amountToDeposit);
 
-        final double amountToWithdraw = 400;
+        final double amountToWithdraw = 300;
         account.withdraw(amountToWithdraw);
 
         final double balance = account.getBalance();
