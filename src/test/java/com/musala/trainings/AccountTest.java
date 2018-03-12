@@ -20,4 +20,20 @@ public class AccountTest {
 
         assertEquals(amountToDeposit, balance);
     }
+
+    @Test
+    public void withdrawTest() {
+
+        CurrentAccount account = new CurrentAccount("123");
+
+        final double amountToDeposit = 1000;
+        account.deposit(amountToDeposit);
+
+        final double amountToWithdraw = 500;
+        account.withdraw(amountToWithdraw);
+
+        final double balance = account.getBalance();
+
+        assertEquals(amountToDeposit - amountToWithdraw, balance);
+    }
 }
