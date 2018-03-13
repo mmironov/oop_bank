@@ -44,6 +44,6 @@ public class AccountTest {
 
         final double balance = account.getBalance();
 
-        assertEquals(0, balance);
+        assertEquals(0.0, balance);
     }
 }
