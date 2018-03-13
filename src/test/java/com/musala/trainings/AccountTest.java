@@ -36,4 +36,14 @@ public class AccountTest {
 
         assertEquals(amountToDeposit - amountToWithdraw, balance);
     }
+
+    @Test
+    public void creatingEmptyAccountTest() {
+
+        CurrentAccount account = new CurrentAccount("123");
+
+        final double balance = account.getBalance();
+
+        assertEquals(0, balance);
+    }
 }
