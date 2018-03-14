@@ -2,13 +2,13 @@ package com.musala.trainings.accounts;
 
 public class CurrentAccount extends Account {
 
-	private int overdraftLimit;
+	private double overdraftLimit;
 	
-	public int getOverdraftLimit() {
+	public double getOverdraftLimit() {
 		return overdraftLimit;
 	}
 
-	public void setOverdraftLimit(int overdraftLimit) {
+	public void setOverdraftLimit(double overdraftLimit) {
 		this.overdraftLimit = overdraftLimit;
 	}
 

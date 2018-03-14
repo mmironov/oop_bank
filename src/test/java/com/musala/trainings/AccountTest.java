@@ -46,4 +46,23 @@ public class AccountTest {
 
         assertEquals(0.0, balance);
     }
+
+    @Test
+    public void withdrawOverTheLimitTest() {
+
+        CurrentAccount account = new CurrentAccount("123");
+
+        final double overdraftLimit = 1000;
+        account.setOverdraftLimit(overdraftLimit);
+
+        final double amountToDeposit = 500;
+        account.deposit(amountToDeposit);
+
+        final double amountToWithdraw = 1500;
+        account.withdraw(amountToWithdraw);
+
+        final double balance = account.getBalance();
+
+        assertEquals(amountToDeposit, balance);
+    }
 }
