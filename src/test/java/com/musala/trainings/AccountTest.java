@@ -58,7 +58,7 @@ public class AccountTest {
         final double amountToDeposit = 500;
         account.deposit(amountToDeposit);
 
-        final double amountToWithdraw = 1500;
+        final double amountToWithdraw = 1600;
         account.withdraw(amountToWithdraw);
 
         final double balance = account.getBalance();
