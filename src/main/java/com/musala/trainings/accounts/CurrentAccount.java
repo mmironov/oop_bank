@@ -37,6 +37,6 @@ public class CurrentAccount extends Account {
 	
 	@Override
 	public String toString() {
-		return String.format("%s\nOverdraft Limit: %d", super.toString(), overdraftLimit);
+		return String.format("%s\nOverdraft Limit: %f", super.toString(), overdraftLimit);
 	}
 }
