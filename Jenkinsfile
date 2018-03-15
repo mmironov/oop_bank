@@ -19,5 +19,22 @@ mvn package'''
             mvn verify'''
         }
     }
+
+    stage('Deliver for development') {
+                    when {
+                        branch 'dev'
+                    }
+                    steps {
+                        input message: 'Deliver for development? (Click "Proceed" to continue)'
+                    }
+     }
+                stage('Deploy for production') {
+                    when {
+                        branch 'master'
+                    }
+                    steps {
+                        input message: 'Deliver for production? (Click "Proceed" to continue)'
+                    }
+                }
   }
 }
