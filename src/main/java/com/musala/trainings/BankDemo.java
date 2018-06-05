@@ -11,7 +11,7 @@ public class BankDemo {
 
 		Bank bank = new Bank(new BusinessAccountOpener());
 		
-		Account mainAccount = new CurrentAccount("12345");
+		Account mainAccount = new CurrentAccount("000009");
 		Account mySavings = new SavingsAccount("123", 1);
 		
 		bank.add(mainAccount);
