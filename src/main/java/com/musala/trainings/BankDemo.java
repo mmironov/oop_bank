@@ -10,8 +10,8 @@ public class BankDemo {
 	public static void main(String[] args) {
 
 		Bank bank = new Bank(new BusinessAccountOpener());
-		
-		Account mainAccount = new CurrentAccount("000009");
+
+		Account mainAccount = new CurrentAccount("12346");
 		Account mySavings = new SavingsAccount("123", 1);
 		
 		bank.add(mainAccount);
