@@ -20,7 +20,7 @@ export PATH=$PATH:$M2_HOME/bin
 mvn verify'''
           }
         }
-        stage('') {
+        stage('Log') {
           steps {
             echo 'Testing....'
           }
@@ -28,6 +28,13 @@ mvn verify'''
       }
     }
     stage('Deploy to Production') {
+
+    when {
+        branch 'dev'
+    }
+    steps {
+        input message: 'Deliver for development? (Click "Proceed" to continue)'
+    }
       steps {
         input 'Do you want to deploy to production?'
       }
