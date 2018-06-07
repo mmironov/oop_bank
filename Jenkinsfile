@@ -27,14 +27,18 @@ mvn verify'''
         }
       }
     }
+
+    stage('Deliver for development') {
+                        when {
+                            branch 'dev'
+                        }
+                        steps {
+                            input message: 'Deliver for development? (Click "Proceed" to continue)'
+                        }
+         }
+
     stage('Deploy to Production') {
 
-    when {
-        branch 'dev'
-    }
-    steps {
-        input message: 'Deliver for development? (Click "Proceed" to continue)'
-    }
       steps {
         input 'Do you want to deploy to production?'
       }
