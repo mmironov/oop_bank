@@ -55,7 +55,7 @@ public class AccountTest {
         final double overdraftLimit = 1000;
         account.setOverdraftLimit(overdraftLimit);
 
-        final double amountToDeposit = 500;
+        final double amountToDeposit = 600;
         account.deposit(amountToDeposit);
 
         final double amountToWithdraw = 1600;
