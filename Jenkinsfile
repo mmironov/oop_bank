@@ -11,30 +11,41 @@ mvn package'''
       }
     }
     stage('Test') {
-      steps {
-        sh '''export M2_HOME=/usr/local/Cellar/maven/3.3.3/libexec
+      parallel {
+        stage('Test') {
+          steps {
+            sh '''export M2_HOME=/usr/local/Cellar/maven/3.3.3/libexec
 export PATH=$PATH:$M2_HOME/bin
 
 mvn verify'''
+          }
+        }
+        stage('Test 2') {
+          steps {
+            sh '''export M2_HOME=/usr/local/Cellar/maven/3.3.3/libexec
+export PATH=$PATH:$M2_HOME/bin
+
+mvn clean
+mvn package'''
+          }
+        }
       }
     }
-
     stage('Deliver for production') {
-          when {
-            branch 'master'
-          }
-          steps {
-            input 'Deliver for production? (Click "Proceed" to continue)'
-          }
+      when {
+        branch 'master'
+      }
+      steps {
+        input 'Deliver for production? (Click "Proceed" to continue)'
+      }
     }
-
     stage('Deploy') {
-        steps {
-            sh '''export M2_HOME=/usr/local/Cellar/maven/3.3.3/libexec
+      steps {
+        sh '''export M2_HOME=/usr/local/Cellar/maven/3.3.3/libexec
                   export PATH=$PATH:$M2_HOME/bin
 
             echo "Deployed"'''
-        }
+      }
     }
   }
 }
