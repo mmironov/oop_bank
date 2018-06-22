@@ -19,6 +19,15 @@ mvn verify'''
       }
     }
 
+    stage('Deliver for production') {
+          when {
+            branch 'master'
+          }
+          steps {
+            input 'Deliver for production? (Click "Proceed" to continue)'
+          }
+    }
+
     stage('Deploy') {
         steps {
             sh '''export M2_HOME=/usr/local/Cellar/maven/3.3.3/libexec
