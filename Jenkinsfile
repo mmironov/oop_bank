@@ -23,8 +23,15 @@ mvn package'''
         stage('Test 2') {
           steps {
             echo 'Test 2'
-
             input 'Do you want to proceed?'
+          }
+        }
+        stage('') {
+          steps {
+            waitUntil() {
+              echo 'Child Step'
+            }
+            
           }
         }
       }
