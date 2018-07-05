@@ -25,14 +25,15 @@ mvn package'''
             input 'Deliver for development? (Click "Proceed" to continue)'
           }
     }
-        stage('Deploy to Production') {
 
-            when {
-              branch 'master'
+    stage('Deploy to Production') {
+
+                when {
+                  branch 'master'
+                }
+                steps {
+
+                input 'Do you want to deploy to production?'
             }
-
-            input 'Do you want to deploy to production?'
-          }
-        }
-  }
+    }
 }
