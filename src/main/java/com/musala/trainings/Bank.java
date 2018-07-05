@@ -12,7 +12,7 @@ import com.musala.trainings.accounts.Opener;
  */
 public class Bank {
 	
-	private static final int CAPACITY = 260;
+	private static final int CAPACITY = 250;
 	
 	private Account[] accounts;
 	private int size;
