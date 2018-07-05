@@ -36,4 +36,5 @@ mvn package'''
                 input 'Do you want to deploy to production?'
             }
     }
+   }
 }
