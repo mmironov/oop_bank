@@ -29,6 +29,7 @@ mvn package'''
         stage('') {
           steps {
             waitUntil() {
+              sleep(1000)
               echo 'Child Step'
             }
             
