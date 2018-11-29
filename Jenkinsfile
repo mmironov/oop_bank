@@ -26,15 +26,6 @@ mvn package'''
             input 'Do you want to proceed?'
           }
         }
-        stage('') {
-          steps {
-            waitUntil() {
-              sleep(10)
-              echo 'Child Step'
-            }
-            
-          }
-        }
       }
     }
     stage('Deliver for development') {
