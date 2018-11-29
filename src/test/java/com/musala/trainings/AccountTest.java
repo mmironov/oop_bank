@@ -9,7 +9,7 @@ import static junit.framework.TestCase.assertEquals;
 public class AccountTest {
 
     @Test
-    public void depositTest() {
+    public void testDepositInEmptyAccount() {
 
         CurrentAccount account = new CurrentAccount("123");
 
@@ -64,10 +64,5 @@ public class AccountTest {
         final double balance = account.getBalance();
 
         assertEquals(amountToDeposit, balance);
-    }
-
-    @Test
-    public void loginUsingInternetIT() {
-
     }
 }

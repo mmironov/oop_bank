@@ -1,0 +1,13 @@
+/Users/mmiro/IdeaProjects/Bank/src/main/java/com/musala/trainings/Bank.java
+/Users/mmiro/IdeaProjects/Bank/src/main/java/com/musala/trainings/customers/Customer.java
+/Users/mmiro/IdeaProjects/Bank/src/main/java/com/musala/trainings/accounts/Opener.java
+/Users/mmiro/IdeaProjects/Bank/src/main/java/com/musala/trainings/payments/PayPalPayment.java
+/Users/mmiro/IdeaProjects/Bank/src/main/java/com/musala/trainings/payments/BankCardPayment.java
+/Users/mmiro/IdeaProjects/Bank/src/main/java/com/musala/trainings/accounts/BusinessAccountOpener.java
+/Users/mmiro/IdeaProjects/Bank/src/main/java/com/musala/trainings/accounts/SavingsAccount.java
+/Users/mmiro/IdeaProjects/Bank/src/main/java/com/musala/trainings/accounts/Account.java
+/Users/mmiro/IdeaProjects/Bank/src/main/java/com/musala/trainings/payments/Payment.java
+/Users/mmiro/IdeaProjects/Bank/src/main/java/com/musala/trainings/accounts/CreditCardAccount.java
+/Users/mmiro/IdeaProjects/Bank/src/main/java/com/musala/trainings/BankDemo.java
+/Users/mmiro/IdeaProjects/Bank/src/main/java/com/musala/trainings/accounts/CurrentAccount.java
+/Users/mmiro/IdeaProjects/Bank/src/main/java/com/musala/trainings/payments/MobilePayment.java
